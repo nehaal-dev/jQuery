@@ -1,0 +1,74 @@
+<!-- Slide Methods:  (1) slideDown()    (2) slideUp()      (3) slideToggle() -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide show methods</title>
+</head>
+<style>
+    body {
+        font-family: arial
+    }
+    
+    #box {
+        padding: 10px;
+        border: 5px solid rgb(250, 38, 38);
+        background: rgb(67, 228, 214);
+    }
+</style>
+
+<body>
+    <h1>jQuerry hide show methods </h1>
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae veniam laboriosam iste aut, eum iusto dolores quidem natus nesciunt, accusantium dolorem voluptate totam repudiandae repellat a voluptas! Earum, ducimus possimus.</p>
+    </div>
+    <br>
+    <button id="slideUpbtn">Slide Up</button>
+    <button id="slideDownbtn">Slide Down</button>
+    <button id="slidetogglebtn">Slide Toggle</button>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#slideUpbtn').click(function() {
+                // $('#box').slideUp();
+                // $('#box').slideUp("slow");
+                // $('#box').slideUp(3000);
+                $('#box').slideUp(3000, function() {
+                    console.log("Now its Hidden  ");
+                });
+            });
+
+
+
+            $('#slideDownbtn').click(function() {
+                // $('#box').slideDown();
+                //$('#box').slideDown("slow");
+                // $('#box').slideDown(3000);
+                $('#box ').slideDown(3000, function() {
+                    console.log("Now its shown");
+                });
+            });
+
+
+
+            $('#slidetogglebtn').click(function() {
+                $('#box').slideToggle(2000, function() {
+                    console.log("Hey Toogle");
+                });
+            });
+
+
+
+        });
+    </script>
+
+</body>
+
+</html>

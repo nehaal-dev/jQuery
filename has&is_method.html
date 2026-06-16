@@ -1,0 +1,73 @@
+<!-- has() method is used to targetsome tag like target <b>bold tag</b> in given example
+
+<p>this is <b>some</b> text</p>
+<p>this is some text</p> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery has() & is() Methods</title>
+</head>
+<style>
+    body {
+        font-family: arial;
+    }
+    
+    #first {
+        padding: 10px;
+        border: 3px solid rgb(194, 6, 6);
+        background: lightgoldenrodyellow;
+    }
+</style>
+
+<body>
+    <h1>jQuery clone Methods</h1>
+
+    <div id="first">
+
+        <p>Lorem ipsum dolor, sit amet consectetur<b> adipisicing</b> elit. Dolor animi id quaerat inventore ullam dolores adipisci cum reprehenderit tempore.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae laboriosam, placeat consectetur corporis, distinctio rem aperiam vero nemo architecto dignissimos quidem debitis facilis cupiditate, vel quam laborum. Quibusdam, minima cupiditate.</p>
+    </div> <br> <br>
+    <ul>
+        <li>orange</li>
+        <li><span>Apple</span></li>
+        <li>Banana</li>
+        <li>fig<b>Grape</b></li>
+    </ul>
+
+    <p class="test">Lorem ipsum dolor sit amet consectetur <b>adipisicing
+            elit</b> Animi repudiandae ut, voluptatum quam, vitae magnam nesciunt amet provident aspernatur tempora,<span class="test">eveniet doloribus natus ipsum </span> obcaecati nihil esse quasi illo sapiente?
+    </p>
+
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur harum, nemo ex, accusantium iste consectetur inventore ipsa asperiores in eveniet adipisci optio a, nostrum maxime dolorem dolores voluptas maiores odio.</p>
+    <br>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            // $("p ").has('span').css('background', 'gold');
+            // $("p ").has('b,span').css('background', 'pink');
+            //$("li").has('b,span').css('background', 'red');
+            // $('p').has('.test').css('background', 'gold');
+
+            //is() methods
+
+            $('p').click(function() {
+                if ($(this).parent().is('div')) {
+                    $(this).css('background', 'red');
+                }
+
+
+            });
+
+
+
+        });
+    </script>
+
+</body>
+
+</html>

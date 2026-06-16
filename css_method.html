@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery CSS Methods </title>
+</head>
+<style>
+    body {
+        font-family: arial
+    }
+    
+    #box {
+        padding: 10px;
+        border: 3px solid violet;
+    }
+</style>
+
+<body>
+    <h1>jQuery CSS Methods</h1>
+
+    <div id="box">
+        <h2> Test Box</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor animi id quaerat inventore ullam dolores adipisci cum reprehenderit tempore.</p>
+    </div> <br> <br>
+    <button id="stylebutton">Add style</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#stylebutton').click(function() {
+                $('#box').css({
+                    "background": "orange",
+                    "border": "dotted 2px green",
+                    "color": "red"
+                });
+            });
+
+
+        });
+    </script>
+
+</body>
+
+</html>

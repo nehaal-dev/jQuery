@@ -1,0 +1,82 @@
+<!-- jQuerry have four fade methods  1.fadeIn() 2.fadeOut()  3.fadeToogle()   4.fadeTo()
+fadeIn(): same as hide and show but ye fade krte hue krte h  -->
+<!-- hide method: kisi bhi tag ko hide krna ho then use hide method.
+    show method: hide hue tag ko dobara show krna ho then use show method.
+    toggle method: ye dono ka kam krta krta h hide huwe ko show krna ,aur show huwe tag ko hide krna .  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide show methods</title>
+</head>
+<style>
+    body {
+        font-family: arial
+    }
+    
+    #box {
+        padding: 10px;
+        border: 5px solid rgb(250, 38, 38);
+        background: rgb(67, 228, 214);
+    }
+</style>
+
+<body>
+    <h1>jQuerry hide show methods </h1>
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae veniam laboriosam iste aut, eum iusto dolores quidem natus nesciunt, accusantium dolorem voluptate totam repudiandae repellat a voluptas! Earum, ducimus possimus.</p>
+    </div>
+    <br>
+    <button id="fadeOutbtn">Fade Out</button>
+    <button id="fadeInbtn">Fade In</button>
+    <button id="fadetogglebtn"> Fade Toggle</button>
+    <button id="fadeTobtn">Fade To</button>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#fadeOutbtn').click(function() {
+                // $('#box p').fadeIn("slow");
+                $('#box').fadeOut(3000, function() {
+                    console.log("Now its Hidden  ");
+                });
+            });
+
+
+
+            $('#fadeInbtn').click(function() {
+                //$('#box p').fadeOut("slow");
+                $('#box ').fadeIn(3000, function() {
+                    console.log("Now its shown");
+                });
+            });
+
+
+
+            $('#fadetogglebtn').click(function() {
+                $('#box').fadeToggle(2000, function() {
+                    console.log("Hey Toogle");
+                });
+            });
+            //fadeTo  syntax  $(selector).fadeTo(speed,opacity,callback);  opacity=transparency-btween 0 and 1  callbackfn.
+            $('#fadeTobtn').click(function() {
+                $('#box').fadeTo(2000, 0.2, function() {
+                    console.log("Now its Shown");
+                });
+            });
+
+
+
+        });
+    </script>
+
+</body>
+
+</html>

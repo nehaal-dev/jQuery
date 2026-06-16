@@ -1,0 +1,60 @@
+<!-- animate method koi content one place (source) se destination dusre place pr jati h so hum chahte ki wo bich me hi ruk jaye then use stop method. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        border: 4px solid red;
+        background: lightgreen;
+        position: relative;
+    }
+</style>
+
+<body>
+    <h1>Animate Method</h1>
+    <div id="box">Yahoo Baba</div>
+    <br>
+    <button id="animateBtn">Animate</button>
+    <button id="stopbtn">Stop</button>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#animateBtn').click(function() {
+                $('#box').animate({
+                    left: '150px',
+
+                }, "slow", function() {
+                    console.log("first animation completed");
+                });
+                $('#box').animate({
+                    top: '150px'
+                });
+                $('#box').animate({
+                    width: '250px'
+                });
+                $('#box').animate({
+                    fontSize: '25px'
+                }, 5000);
+
+            });
+            $('#stopbtn').click(function() {
+                $('#box').stop(true, true); //true likhne se animation ke sare function stop ho jate . 2 time true likhne se animation direct finish point tak chla jata h. i.e=   .stop(true,true). stop method() sab  method k  sath kam krta h  like fadeIn faeOut etc.
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

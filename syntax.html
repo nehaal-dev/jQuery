@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn jQuerey</title>
+  
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <h1>yahoo baba: jQuerey Implementaion</h1>
+    <div id="test1">
+        <h2>Test box 1</h2>
+        <p>hello, this is nehaal khan ,struggling to find job in delhi </p>
+    </div>
+    <div id="box" class="test">
+        <h2>Text Box 2</h2>
+        <p>hi,i know some time is difficult but i have self confidence that i will overpass the situation </p>
+    </div>
+    <h4>advance css selector</h4>
+    <ul id="list">
+        <li>Orange</li>
+        <li class="test">Banana</li>
+        <li>Grapes</li>
+        <li class="test">Apple</li>
+        <li>Guava</li>
+    </ul>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+ 
+<script>
+/*
+  $(document).ready(function(){
+            var a=$('#test1').html();
+            console.log(a);
+        // CSS Advance Selector
+            var b=$('#test2').html();
+            console.log(b);
+           // $('#list test').css("border","3px solid green");
+  });
+*/
+</script>
+
+<h3>Mouse click event</h3>
+<script>
+    $(document).ready(function(){
+        /*$('#box').click(function(){
+               $('#box').css('background-color','green');
+               
+            }); */
+      
+
+        $('#box').dbclick(function(){
+                $('#box').css('background-color','orange');
+            });
+
+        $('#box').contextmenu(function(){
+               $('#box').css('background-color','blue');
+            });
+
+        $('#box').mouseenter(function(){
+               $('#box').css('background-color','tan');
+            });
+
+        $('#box').mouseleave(function(){
+               $('#box').css('background-color','purple');
+
+            });
+
+
+
+     });       
+</script>
+
+
+</body>
+</html>

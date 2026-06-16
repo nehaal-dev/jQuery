@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Keyboard Events</title>
+</head>
+<style>
+    body {
+        font-family: arial;
+    }
+    
+    #box {
+        padding: 10px;
+        border: 3px solid rgb(194, 6, 6);
+    }
+    
+    .boxbg {
+        background: rgb(100, 233, 111);
+    }
+</style>
+
+<body>
+    <h1>jQuery Append & Prepend Methods</h1>
+    <!-- on method =jab ek hi id pr ek se jyada event lagta h tab hum wha on method use krte -->
+    <!-- <div id="box">
+        <h2> Test Box</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor animi id quaerat inventore ullam dolores adipisci cum reprehenderit tempore.</p>
+    </div> <br> <br> -->
+
+
+    <ol>
+
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+
+    </ol>
+
+
+
+
+    <button id="append">Append</button>
+    <button id="prepend">Prepend</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#append").click(function() {
+                $('#box').append("<h2>Yahoo Baba</h2>");
+
+            });
+            $("#prepend").click(function() {
+                $('#box').prepend("<h3>Yahoo Baba</h3>");
+
+            });
+
+            $("#append").click(function() {
+                $('ol').append("<li>List Item new</li>");
+
+            });
+            $("#prepend").click(function() {
+                $('ol').prepend("<li>List Item old</li>");
+
+            });
+
+
+        });
+    </script>
+
+</body>
+
+</html>

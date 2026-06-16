@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Keyboard Events</title>
+</head>
+<style>
+    body {
+        font-family: arial;
+    }
+    
+    #box {
+        padding: 10px;
+        border: 3px solid rgb(194, 6, 6);
+    }
+    
+    .boxbg {
+        background: rgb(100, 233, 111);
+    }
+    
+    p1 {
+        color: aqua;
+    }
+    
+    p2 {
+        color: rgb(236, 137, 56);
+    }
+    
+    p3 {
+        color: rgb(22, 95, 7);
+    }
+    
+    ;
+</style>
+
+<body>
+    <h1>jQuery Replacewith() & ReplaceAll() Methods</h1>
+
+    <div id="box">
+        <h2> Test Box</h2>
+        <p1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor animi id quaerat inventore ullam dolores adipisci cum reprehenderit tempore.</p1><br>
+        <p2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor animi id quaerat inventore ullam dolores adipisci cum reprehenderit tempore.</p2><br>
+        <p3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor animi id quaerat inventore ullam dolores adipisci cum reprehenderit tempore.</p3>
+    </div> <br> <br>
+
+
+
+    <button id="replaceWith">Replace with</button>
+
+    <button id="replaceAll">Replace all</button>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#replaceWith").click(function() {
+                $("#box p1 ").replaceWith("<h2>yahoo baba</h2>");
+                $("#box p3 ").replaceWith("<h2>nehaal khan </h2>");
+
+
+            });
+            $("#replaceAll").click(function() {
+                $("<h2>nehaal khan </h2>").replaceAll("#box p1,p2,p3");
+
+            });
+
+
+
+        });
+    </script>
+
+</body>
+
+</html>

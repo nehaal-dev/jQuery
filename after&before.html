@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Keyboard Events</title>
+</head>
+<style>
+    body {
+        font-family: arial;
+    }
+    
+    #box {
+        padding: 10px;
+        border: 3px solid rgb(194, 6, 6);
+        background-color: rgb(235, 224, 161);
+    }
+    
+    .boxbg {
+        background: rgb(100, 233, 111);
+    }
+</style>
+
+<body>
+    <h1>jQuery before & after Methods
+    </h1>
+    <!-- before &after method =same as append &prepend but isko ekdm object ke last me lgate h  mtlb object ke khtm hone pr-->
+    <div id="box">
+        <h2> Test Box</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor animi id quaerat inventore ullam dolores adipisci cum reprehenderit tempore.</p>
+    </div> <br> <br>
+
+
+
+
+    <button id="after">after</button>
+    <button id="before">before</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#before").click(function() {
+                $('#box').before("<h2>Before: Yahoo Baba</h2><p>this is just paragraph text </p>");
+
+            });
+            $("#after").click(function() {
+                $('#box').after("<h3>After: Yahoo Baba</h3>");
+
+            });
+
+
+        });
+    </script>
+
+</body>
+
+</html>

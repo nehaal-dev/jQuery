@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wrap & Unwrap Methods</title>
+</head>
+<style>
+    #box {
+        padding: 10px;
+        border: 3px solid rgb(194, 6, 6);
+    }
+</style>
+
+<body>
+    <h1>wrap & Unwrap Method</h1>
+    <div id="box">
+        <h2>Text Box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere fugiat earum corrupti ut exercitationem, suscipit eum commodi doloremque corporis ab, veniam temporibus autem tempore reprehenderit? Amet voluptas sed nisi? Repudiandae?</p>
+    </div> <br><br>
+    <button id="wrapbtn">wrap</button>
+    <button id="Unwrapbtn">Unwrap</button>
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+<script>
+    $('document').ready(function() {
+        $('#wrapbtn').click(function() {
+            $('#box p').wrap('<h1><i></i></h1>');
+
+        });
+        $('#Unwrapbtn').click(function() {
+            $('#box p').unwrap();
+
+        });
+
+
+
+    });
+</script>

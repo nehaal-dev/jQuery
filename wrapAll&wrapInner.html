@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box {
+        border: 10px solid green;
+        padding: 5px;
+    }
+    
+    #test {
+        color: rgb(250, 10, 218);
+        background-color: #e1e997;
+    }
+    
+    .red {
+        color: red;
+    }
+</style>
+
+<body>
+    <h1>WrapAll & WrapInner</h1>
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium sunt ratione quas, perferendis non quasi corrupti modi iusto suscipit voluptatum error. Ea at corporis ipsum vel natus necessitatibus omnis eaque.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium sunt ratione quas, perferendis non quasi corrupti modi iusto suscipit voluptatum error. Ea at corporis ipsum vel natus necessitatibus omnis eaque.</p>
+    </div> <br><br>
+    <button id="wrapAllbtn">wrapAll</button>
+    <button id="wrapInnerbtn">wrapInner</button>
+
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+
+<script>
+    $('document').ready(function() {
+        $('#wrapAllbtn').click(function() {
+            $('#box p').wrapAll('<div id="test"> <div>');
+        })
+
+        $('#wrapInnerbtn').click(function() {
+            $('h1').wrapInner('<span class="red"></span>');
+        })
+    })
+</script>

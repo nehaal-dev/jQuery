@@ -1,0 +1,74 @@
+<!-- hide method: kisi bhi tag ko hide krna ho then use hide method.
+    show method: hide hue tag ko dobara show krna ho then use show method.
+    toggle method: ye dono ka kam krta krta h hide huwe ko show krna ,aur show huwe tag ko hide krna .  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide show methods</title>
+</head>
+<style>
+    body {
+        font-family: arial
+    }
+    
+    #box {
+        padding: 10px;
+        border: 5px solid rgb(250, 38, 38);
+        background: rgb(216, 248, 75);
+    }
+</style>
+
+<body>
+    <h1>jQuerry hide & show methods </h1>
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae veniam laboriosam iste aut, eum iusto dolores quidem natus nesciunt, accusantium dolorem voluptate totam repudiandae repellat a voluptas! Earum, ducimus possimus.</p>
+    </div>
+    <br>
+    <button id="hidebtn">Hide</button>
+    <button id="showbtn">Show</button>
+    <button id="togglebtn">Toggle</button>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#hidebtn').click(function() {
+                //$('#box p').hide("");
+                //$('#box p').hide("slow");
+                // $('#box p').hide("fast");
+                //$('#box p').hide(1000);// ye 1000 time h in sec mtlb 1 sec time
+                $('#box p').hide(1000, function() {
+                    console.log("Now its hidden");
+                }); //callback fn. is jaise hi koi task complete ho tab ye fn(call back ) apne aap run ho jaye.this is second parameter given after 1000 s mtlb 1 sec.
+
+            });
+            $('#box p').hide(1000, function() {
+                console.log("Now its shown");
+            });
+            $('#showbtn').click(function() {
+                    // $('#box p').show("");
+                    //$('#box p').show("slow");
+                    //$('#box p').show("fast");
+                    $('#box p').show(3000);
+                })
+                // $('#togglebtn').click(function() {
+                //     $('#box').toggle("");
+                // });
+            $('#togglebtn').click(function() {
+                $('#box').toggle(1000, function() {
+                    console.log("Hey Toogle")
+                });
+            })
+        });
+    </script>
+
+</body>
+
+</html>
